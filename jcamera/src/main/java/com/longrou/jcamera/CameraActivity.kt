@@ -1021,6 +1021,7 @@ class CameraActivity : AppCompatActivity() {
          * Camera state: 捕获录像
          */
         const val STATE_RECORD_TAKEN = 0x00000004
+
         private fun getDate(): String {
             val ca = Calendar.getInstance()
             val year = ca.get(Calendar.YEAR)           // 获取年份

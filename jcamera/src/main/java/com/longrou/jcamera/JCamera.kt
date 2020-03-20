@@ -74,17 +74,19 @@ class JCamera {
         fun resultIsImg(data: Intent): Boolean {
             return data.getBooleanExtra(CAPTURE_RESULT_IS_IMG, false)
         }
+
         @JvmStatic
         fun getResultPath(data: Intent): String {
             return data.getStringExtra(CAPTURE_RESULT)
         }
 
+        @JvmStatic
+        fun get(): JCamera {
+            return instance
+        }
+
         val instance: JCamera by lazy(mode = LazyThreadSafetyMode.SYNCHRONIZED) {
             JCamera()
-        }
-        @JvmStatic
-        fun get(): JCamera{
-            return instance
         }
     }
 }

@@ -47,7 +47,7 @@ class CameraConfig {
          * store
          */
         fun getSaveDir(context :Context):String{
-            val dir = "${context.getExternalFilesDir(Environment.DIRECTORY_PICTURES).toString() + "/" + context.packageName}/JCamera"
+            val dir = "${context.getExternalFilesDir(Environment.DIRECTORY_DCIM).toString() + "/" + context.packageName}/JCamera"
             val file = File(dir)
             if (!file.exists()){
                 file.mkdirs()
